@@ -55,14 +55,14 @@ style = "fg:iris"
 symbol = "─"
 
 [git_branch]
-format = "[](fg:overlay)[ $symbol $branch ]($style)[](fg:overlay)[─](fg:iris)"
+format = "[](fg:overlay)[ $symbol $branch]($style)"
 style = "bg:overlay fg:foam"
 symbol = ""
 
 [git_status]
 disabled = false
 style = "bg:overlay fg:love"
-format = '[](fg:overlay)([$all_status$ahead_behind]($style))[](fg:overlay)[─](fg:iris)'
+format = '([ $all_status$ahead_behind]($style))[](fg:overlay)[─](fg:iris)'
 up_to_date = '[ ✓ ](bg:overlay fg:iris)'
 untracked = '[?\($count\)](bg:overlay fg:gold)'
 stashed = '[\$](bg:overlay fg:iris)'
