@@ -12,6 +12,7 @@ $moduleLoading = @(
 
 # ===== Shell Prompt =====
 # Starship prompt configuration
+# scoop install main/starship
 function Invoke-Starship-TransientFunction {
     &starship module character
 }
@@ -33,15 +34,10 @@ Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
 
 # ===== Custom Functions =====
-# File and command utilities
-function which ($command) {
-    Get-Command -Name $command -ErrorAction SilentlyContinue |
-    Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
-}
-
 # Modern ls replacements using eza
-function ll { eza --long --icons --git $args }
-function la { eza --long --icons --git --all $args }
+# scoop install main/eza
+function ll { eza --long --header --icons --git $args }
+function la { eza --long --header --icons --git --all $args }
 
 # Directory navigation shortcuts
 function .. { Set-Location .. }
@@ -51,6 +47,10 @@ function home { Set-Location ~ }
 
 # ===== Aliases =====
 # Navigation and common tools
+# scoop install main/git
+# scoop install main/zoxide
+# scoop install main/bat
+# scoop install main/neovim
 $aliases = @{
     'cd'      = 'z'
     'pn'      = 'pnpm'
@@ -60,7 +60,6 @@ $aliases = @{
     'cc'      = 'cookiecutter'
     'grep'    = 'findstr'
     'py'      = 'python'
-    'python3' = 'python'
     'pip'     = 'pip3'
 }
 
@@ -83,4 +82,4 @@ Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory
 Remove-Item Alias:ni -Force -ErrorAction Ignore
 
 # Enable transient prompt (must be at the end)
-Enable-TransientPrompt
+# Enable-TransientPrompt
