@@ -1,3 +1,27 @@
+# Application specific directories
 /configstore
 /scoop
-starship.toml.bak
+
+# Backup and temporary files
+*.bak
+*.tmp
+*.swp
+*.swo
+*~
+
+# OS specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+
+# Log files
+*.log
+logs/
+
+# Local environment files
+.env
+.env.local
