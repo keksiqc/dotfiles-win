@@ -1,5 +1,5 @@
 format = """
-[╭](fg:iris)\
+[╭](fg:overlay)\
 $username\
 $directory\
 $git_branch\
@@ -34,35 +34,28 @@ foam = '#9ccfd8'
 iris = '#c4a7e7'
 
 [character]
-format = "[╰─$symbol](fg:iris)"
-success_symbol = '[](fg:bold white)'
-error_symbol = '[×](fg:bold love)'
+format = "[╰─$symbol](fg:overlay)"
+success_symbol = '[](fg:white)'
+error_symbol = '[](fg:love)'
 
 [directory]
-format = "[](fg:overlay)[ $path ]($style)[](fg:overlay)[─](fg:iris)"
+format = "[](fg:rose)[](fg:overlay bg:rose)[](fg:rose bg:overlay)[ $path]($style)[](fg:overlay)[─](fg:overlay)"
 style = "bg:overlay fg:pine"
 truncation_length = 3
 truncation_symbol = "…/"
 
-[directory.substitutions]
-Documents = "󰈙"
-Downloads = " "
-Music = " "
-Pictures = " "
-
 [fill]
-style = "fg:iris"
+style = "fg:overlay"
 symbol = "─"
 
 [git_branch]
-format = "[](fg:overlay)[ $symbol $branch]($style)"
+format = "[](fg:iris)[](fg:overlay bg:iris)[](fg:iris bg:overlay)[ $branch ]($style)"
 style = "bg:overlay fg:foam"
-symbol = ""
 
 [git_status]
 disabled = false
 style = "bg:overlay fg:love"
-format = '([ $all_status$ahead_behind]($style))[](fg:overlay)[─](fg:iris)'
+format = '([$all_status$ahead_behind]($style))[](fg:overlay)[─](fg:overlay)'
 up_to_date = '[ ✓ ](bg:overlay fg:iris)'
 untracked = '[?\($count\)](bg:overlay fg:gold)'
 stashed = '[\$](bg:overlay fg:iris)'
@@ -76,13 +69,13 @@ behind = '[⇣\(${count}\)](bg:overlay fg:rose)'
 
 [time]
 disabled = false
-format = "[](fg:overlay)[ $time 󰴈 ]($style)[](fg:overlay)"
+format = "[](fg:foam)[󰴈](fg:overlay bg:foam)[](fg:foam bg:overlay)[ $time]($style)[](fg:overlay)"
 style = "bg:overlay fg:rose"
 time_format = "%H:%M"
 
 [username]
 disabled = false
-format = "[](fg:overlay)[ 󰧱 $user ]($style)[](fg:overlay)[─](fg:iris)"
+format = "[](fg:love)[󰧱](fg:overlay bg:love)[](fg:love bg:overlay)[ $user]($style)[](fg:overlay)[─](fg:overlay)"
 show_always = true
 style_root = "bg:overlay fg:iris"
 style_user = "bg:overlay fg:iris"
@@ -91,78 +84,78 @@ style_user = "bg:overlay fg:iris"
 
 [c]
 style = "bg:overlay fg:pine"
-format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay)[─](fg:iris)"
+format = "$symbol[ $version]($style)[](fg:overlay)[─](fg:overlay)"
 disabled = false
-symbol = " "
+symbol = "[](fg:iris)[](fg:overlay bg:iris)[](fg:iris bg:overlay)"
 
 [elixir]
 style = "bg:overlay fg:pine"
-format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay)[─](fg:iris)"
+format = "$symbol[ $version]($style)[](fg:overlay)[─](fg:overlay)"
 disabled = false
-symbol = " "
+symbol = "[](fg:iris)[](fg:overlay bg:iris)[](fg:iris bg:overlay)"
 
 [elm]
 style = "bg:overlay fg:pine"
-format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay)[─](fg:iris)"
+format = "$symbol[ $version]($style)[](fg:overlay)[─](fg:overlay)"
 disabled = false
-symbol = " "
+symbol = "[](fg:iris)[](fg:overlay bg:iris)[](fg:iris bg:overlay)"
 
 [golang]
 style = "bg:overlay fg:pine"
-format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay)[─](fg:iris)"
+format = "$symbol[ $version]($style)[](fg:overlay)[─](fg:overlay)"
 disabled = false
-symbol = " "
+symbol = "[](fg:iris)[](fg:overlay bg:iris)[](fg:iris bg:overlay)"
 
 [haskell]
 style = "bg:overlay fg:pine"
-format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay)[─](fg:iris)"
+format = "$symbol[ $version]($style)[](fg:overlay)[─](fg:overlay)"
 disabled = false
-symbol = " "
+symbol = "[](fg:iris)[](fg:overlay bg:iris)[](fg:iris bg:overlay)"
 
 [java]
 style = "bg:overlay fg:pine"
-format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay)[─](fg:iris)"
+format = "$symbol[ $version]($style)[](fg:overlay)[─](fg:overlay)"
 disabled = false
-symbol = " "
+symbol = "[](fg:iris)[](fg:overlay bg:iris)[](fg:iris bg:overlay)"
 
 [julia]
 style = "bg:overlay fg:pine"
-format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay)[─](fg:iris)"
+format = "$symbol[ $version]($style)[](fg:overlay)[─](fg:overlay)"
 disabled = false
-symbol = " "
+symbol = "[](fg:iris)[](fg:overlay bg:iris)[](fg:iris bg:overlay)"
 
 [nodejs]
 style = "bg:overlay fg:pine"
-format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay)[─](fg:iris)"
+format = "$symbol[ $version]($style)[](fg:overlay)[─](fg:overlay)"
 disabled = false
-symbol = "󰎙 "
+symbol = "[](fg:iris)[󰎙](fg:overlay bg:iris)[](fg:iris bg:overlay)"
 
 [nim]
 style = "bg:overlay fg:pine"
-format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay)[─](fg:iris)"
+format = "$symbol[ $version]($style)[](fg:overlay)[─](fg:overlay)"
 disabled = false
-symbol = "󰆥 "
+symbol = "[](fg:iris)[󰆥](fg:overlay bg:iris)[](fg:iris bg:overlay)"
 
 [rust]
 style = "bg:overlay fg:pine"
-format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay)[─](fg:iris)"
+format = "$symbol[ $version]($style)[](fg:overlay)[─](fg:overlay)"
 disabled = false
-symbol = ""
+symbol = "[](fg:iris)[](fg:overlay bg:iris)[](fg:iris bg:overlay)"
 
 [scala]
 style = "bg:overlay fg:pine"
-format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay)[─](fg:iris)"
+format = "$symbol[ $version]($style)[](fg:overlay)[─](fg:overlay)"
 disabled = false
-symbol = " "
+symbol = "[](fg:iris)[](fg:overlay bg:iris)[](fg:iris bg:overlay)"
 
 [python]
 style = "bg:overlay fg:pine"
-format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay)[─](fg:iris)"
+format = "$symbol[ $version]($style)[](fg:overlay)[─](fg:overlay)"
 disabled = false
-symbol = ' '
+symbol = '[](fg:iris)[](fg:overlay bg:iris)[](fg:iris bg:overlay)'
 
 [conda]
 style = "bg:overlay fg:pine"
-format = "[](fg:overlay)[$symbol$environment]($style)[](fg:overlay)[─](fg:iris)"
+format = "$symbol[$environment]($style)[](fg:overlay)[─](fg:overlay)"
 disabled = false
-symbol = '🅒 '
+symbol = '[](fg:iris)[](fg:overlay bg:iris)[](fg:iris bg:overlay)'
