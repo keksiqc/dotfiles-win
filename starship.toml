@@ -75,7 +75,7 @@ time_format = "%H:%M"
 
 [username]
 disabled = false
-format = "[](fg:love)[󰧱](fg:overlay bg:love)[](fg:love bg:overlay)[ $user]($style)[](fg:overlay)[─](fg:overlay)"
+format = "[](fg:foam)[󰧱](fg:overlay bg:foam)[](fg:foam bg:overlay)[ $user]($style)[](fg:overlay)[─](fg:overlay)"
 show_always = true
 style_root = "bg:overlay fg:iris"
 style_user = "bg:overlay fg:iris"
